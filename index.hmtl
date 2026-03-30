@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="ROSSELY MARAY " content="width=device-width, initial-scale=1.0">
+<title>Mi Portafolio</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f0ff;
+  color:#333;
+}
+header{
+  background:#6a0dad;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+section{
+  padding:40px;
+}
+.card{
+  background:white;
+  padding:20px;
+  margin:10px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+}
+footer{
+  background:#6a0dad;
+  color:white;
+  text-align:center;
+  padding:10px;
+}
+button{
+  background:#6a0dad;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+button:hover{
+  background:#4b0082;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Mi Portafolio</h1>
+<p>Estudiante de Ingeniería Estadística e Informática</p>
+<nav>
+<a href="#sobre">Sobre mí</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section id="sobre">
+<h2>Sobre mí</h2>
+<p>Soy estudiante apasionada por los datos, la programación y la tecnología.</p>
+<button onclick="mostrarMensaje()">Haz clic</button>
+</section>
+
+<section id="proyectos">
+<h2>Proyectos</h2>
+<div class="grid">
+<div class="card">
+<h3>Proyecto 1</h3>
+<p>Análisis de datos con Python.</p>
+</div>
+<div class="card">
+<h3>Proyecto 2</h3>
+<p>Aplicación web con JavaScript.</p>
+</div>
+<div class="card">
+<h3>Proyecto 3</h3>
+<p>Modelos estadísticos.</p>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<form onsubmit="enviarFormulario(event)">
+<input type="text" placeholder="Nombre" required><br><br>
+<input type="email" placeholder="Email" required><br><br>
+<textarea placeholder="Mensaje" required></textarea><br><br>
+<button type="submit">Enviar</button>
+</form>
+<p id="respuesta"></p>
+</section>
+
+<footer>
+<p>© 2026 Mi Portafolio</p>
+</footer>
+
+<script>
+function mostrarMensaje(){
+  alert("¡Bienvenido a mi portafolio!");
+}
+function enviarFormulario(e){
+  e.preventDefault();
+  document.getElementById("respuesta").innerText =
+  "Gracias por contactarme 👍";
+}
+</script>
+
+</body>
+</html>
